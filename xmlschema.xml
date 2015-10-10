@@ -13,3 +13,12 @@
 </xs:element>
 
 </xs:schema>
+
+<!--The Schema above is interpreted like this:
+<xs:element name="note"> defines the element called "note"
+<xs:complexType> the "note" element is a complex type
+<xs:sequence> the complex type is a sequence of elements
+<xs:element name="to" type="xs:string"> the element "to" is of type string (text)
+<xs:element name="from" type="xs:string"> the element "from" is of type string
+<xs:element name="heading" type="xs:string"> the element "heading" is of type string
+<xs:element name="body" type="xs:string"> the element "body" is of type string -->
