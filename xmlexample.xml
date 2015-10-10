@@ -1,22 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<employees>
-    <employee>
-        <firstName>John</firstName> <lastName>Doe</lastName>
-    </employee>
-    <employee>
-        <firstName>Anna</firstName> <lastName>Smith</lastName>
-    </employee>
-    <employee>
-        <firstName>Peter</firstName> <lastName>Jones</lastName>
-    </employee>
-</employees>
+<bookstore>
 
-<!--The Schema above is interpreted like this:
-<xs:element name="note"> defines the element called "note"
-<xs:complexType> the "note" element is a complex type
-<xs:sequence> the complex type is a sequence of elements
-<xs:element name="to" type="xs:string"> the element "to" is of type string (text)
-<xs:element name="from" type="xs:string"> the element "from" is of type string
-<xs:element name="heading" type="xs:string"> the element "heading" is of type string
-<xs:element name="body" type="xs:string"> the element "body" is of type string -->
+<book category="cooking">
+  <title lang="en">Everyday Italian</title>
+  <author>Giada De Laurentiis</author>
+  <year>2005</year>
+  <price>30.00</price>
+</book>
+
+<book category="children">
+  <title lang="en">Harry Potter</title>
+  <author>J K. Rowling</author>
+  <year>2005</year>
+  <price>29.99</price>
+</book>
+
+<book category="web">
+  <title lang="en">XQuery Kick Start</title>
+  <author>James McGovern</author>
+  <author>Per Bothner</author>
+  <author>Kurt Cagle</author>
+  <author>James Linn</author>
+  <author>Vaidyanathan Nagarajan</author>
+  <year>2003</year>
+  <price>49.99</price>
+</book>
+
+<book category="web">
+  <title lang="en">Learning XML</title>
+  <author>Erik T. Ray</author>
+  <year>2003</year>
+  <price>39.95</price>
+</book>
+
+</bookstore>
+
+<!--    Xpath Example
+
+/bookstore/book[1]	Selects the first book element that is the child of the bookstore element
+/bookstore/book[last()]	Selects the last book element that is the child of the bookstore element
+/bookstore/book[last()-1]	Selects the last but one book element that is the child of the bookstore element
+/bookstore/book[position()<3]	Selects the first two book elements that are children of the bookstore element
+//title[@lang]	Selects all the title elements that have an attribute named lang
+//title[@lang='en']	Selects all the title elements that have a "lang" attribute with a value of "en"
+/bookstore/book[price>35.00]	Selects all the book elements of the bookstore element that have a price element with a value greater than 35.00
+/bookstore/book[price>35.00]/title	Selects all the title elements of the book elements of the bookstore element that have a price element with a value greater than 35.00-->
